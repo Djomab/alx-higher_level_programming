@@ -1,8 +1,5 @@
 # 0x00. Python - Hello, World :ledger:
 
-![header](https://capsule-render.vercel.app/api?type=rect&color=gradient&height=1)
-
-
  * **0. Run Python file**
    * Writing Shell script that runs a Python script.
    * The Python file name will be saved in the environment variable $PYFILE
