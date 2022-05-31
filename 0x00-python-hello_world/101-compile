@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc $PYFILE -o $PYFILE+'c'
+gcc $PYFILE -o $PYFILE
