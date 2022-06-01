@@ -4,7 +4,7 @@ def fizzbuzz():
     num = 1
     while num < 101:
         if (num % 3 == 0 and num % 5 == 0):
-            print("Fizzbuzz", end='')
+            print("FizzBuzz", end='')
         elif (num % 3 == 0):
             print("Fizz", end='')
         elif (num % 5 == 0):
