@@ -2,7 +2,7 @@
 
 def fizzbuzz():
     num = 1
-    while num < 101: 
+    while num < 101:
         if (num % 3 == 0 and num % 5 == 0):
             print("Fizzbuzz", end='')
         elif (num % 3 == 0):
@@ -11,6 +11,5 @@ def fizzbuzz():
             print("Buzz", end='')
         else:
             print("{}".format(num), end='')
-        if (num != 100):
-            print("", end=' ')
+        print("", end=' ')
         num += 1
