@@ -9,5 +9,4 @@ def add_tuple(tuple_a=(), tuple_b=()):
         tuple_b = (0, 0)
     elif len(tuple_b) == 1:
         tuple_b = (tuple_b[0], 0)
-    somme = tuple(map(lambda x, y: x + y, tuple_a, tuple_b))
-    return (somme)
+    return tuple(map(lambda x, y: x + y, tuple_a, tuple_b))
