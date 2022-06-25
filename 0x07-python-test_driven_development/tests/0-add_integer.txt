@@ -1,0 +1,27 @@
+The ``Add Integer`` module
+============================
+
+Using ``add_integer``
+---------------------
+
+First ``add_integer`` from the ``Add Integer`` module:
+
+    >>> add_integer = __import__("0-add_integer").add_integer
+
+Now use it:
+
+    >>> add_integer(2, 3)
+    5
+
+case a, b are strings
+::
+
+    >>> add_integer('a', 3)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer(4, 'c')
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
