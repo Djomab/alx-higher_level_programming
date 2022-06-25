@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+from cmath import nan
+
+
 add_integer = __import__('0-add_integer').add_integer
 
 print(add_integer(1, 2))
@@ -10,6 +13,6 @@ try:
 except Exception as e:
     print(e)
 try:
-    print(add_integer(None))
+    print(add_integer(float(nan)))
 except Exception as e:
     print(e)
