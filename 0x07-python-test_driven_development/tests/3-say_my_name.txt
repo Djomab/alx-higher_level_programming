@@ -1,0 +1,15 @@
+=====================
+Module say_my_name
+=====================
+
+Importing module
+====================
+say_my_name = __import__('say_my_name').say_my_name
+
+Usage
+::
+>>> say_my_name('Djomab', 'Server')
+>>> My name is Djomab Server
+
+1- Case first_name is empty
+2- 
