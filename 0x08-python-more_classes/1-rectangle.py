@@ -3,14 +3,16 @@
 
 
 class Rectangle:
-    """
-    Defines a rectangle
-
-    Args:
-        width: private attribute
-        height: private attribute
-    """
+    """Rectangle class"""
     def __init__(self, width=0, height=0):
+        """
+        Defines a rectangle
+
+        Args:
+            width: private attribute
+            height: private attribute
+        """
+
         self.__width = width
         self.__height = height
     
