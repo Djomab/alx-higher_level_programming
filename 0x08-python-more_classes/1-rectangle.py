@@ -3,9 +3,6 @@
 """Defines a rectangle"""
 
 
-from re import X
-
-
 class Rectangle:
     """Rectangle class"""
 
