@@ -4,4 +4,7 @@ This class defines a rectangle
 """
 
 class Rectangle:
-    pass
+    """Simple rectangle class"""
+
+    def __init__(self):
+        pass
