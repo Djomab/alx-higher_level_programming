@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 
 """Module defines a function that writes to a text file.."""
