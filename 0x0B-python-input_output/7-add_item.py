@@ -2,7 +2,6 @@
 
 """Reading all agruments and adding them to list"""
 import sys
-from os.path import exists
 
 
 if __name__ == "__main__":
