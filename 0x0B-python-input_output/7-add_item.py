@@ -13,9 +13,9 @@ if __name__ == "__main__":
     file = "add_item.json"
     args = sys.argv
 
-    if exists(file):
-        an_obj = load_from_json_file(file)
-        an_obj.extend(args[1:])
-        save_to_json_file(an_obj, file)
-    else:
-        save_to_json_file(args[1:], file)
+    try:
+        obj = load_from_json_file(file)
+    except FileNotFoundError:
+        obj = []
+    obj.extend(args[1:])
+    save_to_json_file(obj, file)
