@@ -16,10 +16,10 @@ class Rectangle(Base):
             id: id of class
         """
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
@@ -44,19 +44,35 @@ class Rectangle(Base):
     @width.setter
     def width(self, val):
         """Set width val"""
+        if not isinstance(val, (int, float)):
+            raise TypeError("width must be an integer")
+        elif val <= 0:
+            raise ValueError("width must be > 0")
         self.__width = val
 
     @height.setter
     def height(self, val):
         """Set height val"""
+        if not isinstance(val, (int, float)):
+            raise TypeError("height must be an integer")
+        elif val <= 0:
+            raise ValueError("height must be > 0")
         self.__height = val
 
     @x.setter
     def x(self, val):
         """Set horizontal val"""
+        if not isinstance(val, (int, float)):
+            raise TypeError("x must be an integer")
+        elif val < 0:
+            raise ValueError("x must be >= 0")
         self.__x = val
 
     @y.setter
     def y(self, val):
         """Set vertical val"""
+        if not isinstance(val, (int, float)):
+            raise TypeError("y must be an integer")
+        elif val < 0:
+            raise ValueError("y must be >= 0")
         self.__y = val
