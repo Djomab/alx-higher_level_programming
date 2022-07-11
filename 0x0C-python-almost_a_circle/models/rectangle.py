@@ -122,5 +122,3 @@ class Rectangle(Base):
         dictionnary['x'] = self.x
         dictionnary['y'] = self.y
         return dictionnary
-
-
