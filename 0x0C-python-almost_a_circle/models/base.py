@@ -2,6 +2,7 @@
 """Base module"""
 
 
+from fileinput import filename
 import json
 
 
@@ -29,8 +30,10 @@ class Base:
 
     @staticmethod
     def save_to_file(cls, list_objs):
-        if list_objs is None or not list_objs:
-            temp = []
-        else:
-            temp = Base.to_json_string(list_objs)
-        json.dump(cls)
+        filename = cls.__name__+".json"
+        with open(filename, 'w') as jf:
+            if list_objs is None or not list_objs:
+                jf.write("[]")
+            else:
+                list_dicts = [o.to_dictionary() for o in list_objs]
+                jf.write(Base.to_json_string(list_dicts))
