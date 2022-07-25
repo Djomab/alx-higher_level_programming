@@ -10,14 +10,15 @@ class Square:
         Args:
             size(int): size of square
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
         """get square size"""
         return (self.__size)
 
+    @property
     def position(self):
         """get square position"""
         return (self.__position)
@@ -31,16 +32,14 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = value
 
-    @property
+    @position.setter
     def position(self, value):
         """set square position"""
-        if type(value) != tuple:
+        if (not isinstance(value, tuple) or len(value) != 2 or
+            not all(isinstance(num, int) for num in value) or
+                not all(num >= 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
-        for item in value:
-            if not isinstance(item, int) or item < 0:
-                raise TypeError("position must be a tuple of"
-                                + "2 positive integers")
-        self.__size = value
+        self.__position = value
 
     def area(self):
         return (self.__size ** 2)
