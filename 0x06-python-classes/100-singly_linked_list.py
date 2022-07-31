@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# something
+"""Define classes for a singly-linked list."""
 
 
 class Node:
