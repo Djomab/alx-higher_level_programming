@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python
 """Define classes for a singly-linked list."""
 
 
