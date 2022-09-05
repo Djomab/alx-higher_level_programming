@@ -1,3 +1,4 @@
+#!/usr/bin/node
 /*
  * prints 3 lines:
  * The first line: “C is fun”
