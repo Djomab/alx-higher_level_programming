@@ -17,7 +17,7 @@ module.exports = class Rectangle {
     }
   }
 
-  //prints the rectangle using the character X
+  // prints the rectangle using the character X
   print () {
     for (let i = 0; i < this.height; i++) {
       for (let j = 0; j < this.width; j++) {
