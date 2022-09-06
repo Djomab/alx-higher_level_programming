@@ -34,6 +34,7 @@ module.exports = class Rectangle {
     this.height = tmp;
   }
 
+  // multiples the width and the height of the rectangle by 2
   double () {
     this.width = this.width * 2;
     this.height = this.height * 2;
