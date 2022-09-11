@@ -19,6 +19,6 @@ if __name__ == "__main__":
     if len != 0:
         for i in range(len - 1):
             print("{}, ".format(rows[i][0]), end="")
-        print("{}, ".format(rows[len - 1][0]))
+        print("{}".format(rows[len - 1][0]))
     cursor.close()
     db.close()
