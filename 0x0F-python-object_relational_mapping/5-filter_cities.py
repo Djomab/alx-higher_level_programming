@@ -12,13 +12,13 @@ if __name__ == "__main__":
                          db=argv[3])
     cursor = db.cursor()
     cursor.execute("""SELECT cities.name FROM states INNER JOIN cities ON
-    states.id = cities.state_id WHERE states.name = %(name)s""",
-                   {'name': argv[4]})
+    states.id = cities.state_id
+    WHERE states.name = %(name)s ORDER BY cities.id """, {'name': argv[4]})
     rows = cursor.fetchall()
-    len = len(rows)
-    if len != 0:
-        for i in range(len - 1):
+    resultLenght = len(rows)
+    if resultLenght != 0:
+        for i in range(resultLenght - 1):
             print("{}, ".format(rows[i][0]), end="")
-        print("{}".format(rows[len - 1][0]))
+        print("{}".format(rows[resultLenght - 1][0]))
     cursor.close()
     db.close()
