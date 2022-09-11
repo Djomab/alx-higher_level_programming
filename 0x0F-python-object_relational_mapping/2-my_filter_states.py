@@ -12,7 +12,7 @@ if __name__ == "__main__":
                          db=argv[3])
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states WHERE name = '{}'".format(argv[4]))
-    rows = cursor.fetchall();
+    rows = cursor.fetchall()
     for row in rows:
         print(row)
     cursor.close()
