@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-python script that ---
+"""Start link class to table in database
 """
 
 import sys
