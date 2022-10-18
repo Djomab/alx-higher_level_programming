@@ -15,7 +15,7 @@ request(endpoint, function (error, response, body) {
   if (error) {
     console.log(error);
   } else {
-    reader = fs.writeFile(filePath, body, 'utf-8', function (error) {
+    fs.writeFile(filePath, body, 'utf-8', function (error) {
       if (error) console.log(error);
     });
   }
