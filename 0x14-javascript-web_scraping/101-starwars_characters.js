@@ -13,14 +13,18 @@ request(endpoint, function (error, response, body) {
   if (error) {
     console.log(error);
   } else {
-    const characters = JSON.parse(body).characters;
-    characters.forEach(char => {
-      request(char, function (err, resp, bod) {
-        if (err) console.log(err);
-        else {
-          console.log(JSON.parse(bod).name);
-        }
-      });
-    });
+    const charactersURL = JSON.parse(body).characters;
+    const charactersName = charactersURL.map(
+      url => new Promise((resolve, reject) => {
+        request(url, (err, res, body) => {
+          if (err) {
+            reject(err);
+          }
+          resolve(JSON.parse(body).name);
+        });
+      }));
+    Promise.all(charactersName)
+      .then(names => console.log(names.join('\n')))
+      .catch(err => console.log(err));
   }
 });
