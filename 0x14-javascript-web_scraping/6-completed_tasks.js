@@ -6,14 +6,20 @@
  */
 
 const request = require('request');
-const id = process.argv[2];
-const endpoint = 'https://jsonplaceholder.typicode.com/todos';
-
-request(endpoint, function (error, response, body) {
-  if (error) {
-    console.log(error);
-  } else {
-    const todos = JSON.parse(body);
-    console.log(JSON.parse(body).title);
+const url = process.argv[2];
+request(url, function (error, response, body) {
+  if (error) console.log(error);
+  else if (response.statusCode === 200) {
+    const completed = {};
+    JSON.parse(body).forEach(task => {
+      if (task.completed === true) {
+        if (completed[task.userId] === undefined) {
+          completed[task.userId] = 1;
+        } else {
+          completed[task.userId]++;
+        }
+      }
+    });
+    console.log(completed);
   }
 });
