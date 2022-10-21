@@ -3,6 +3,7 @@
 This is the add function
 """
 
+
 def add_integer(a, b=98):
     """ Returns a + b """
     if type(a) not in [int, float]:
